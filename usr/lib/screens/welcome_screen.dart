@@ -1,3 +1,5 @@
+import 'package:couldai_user_app/screens/login_screen.dart';
+import 'package:couldai_user_app/screens/register_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -36,14 +38,18 @@ class WelcomeScreen extends StatelessWidget {
               const SizedBox(height: 60),
               ElevatedButton(
                 onPressed: () {
-                  // TODO: Implémenter la navigation vers l'écran de connexion
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const LoginScreen()),
+                  );
                 },
                 child: const Text('S\'identifier'),
               ),
               const SizedBox(height: 20),
               OutlinedButton(
                 onPressed: () {
-                  // TODO: Implémenter la navigation vers l'écran d'inscription
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const RegisterScreen()),
+                  );
                 },
                 child: const Text('S\'inscrire'),
               ),
